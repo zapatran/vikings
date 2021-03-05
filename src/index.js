@@ -27,3 +27,41 @@ names.forEach(function (name) {
   war.addViking(viking);
   war.addSaxon(saxon);
 });
+
+// DOM
+function buildDom(html) {
+  var target = document.querySelector('.container');
+  target.innerHTML = html;
+  return target;
+}
+
+function destroyDom(target) {
+  target.innerHTML = '';
+}
+
+function destroySplashScreen() {
+  destroyDom(splashScreen);
+}
+
+function startGameClick() {
+  destroySplashScreen();
+  // buildGameScreen();
+}
+
+function buildSplashScreen() {
+  splashScreen = buildDom(`
+        <h1>Vikings vs Saxons</h1>
+        <a href="#" class="button">Start battle</a>
+    `);
+
+  splashScreen
+    .querySelector('.button')
+    .addEventListener('click', startGameClick);
+}
+
+function loadGame() {
+  console.log('Let the war games beggin!');
+  buildSplashScreen();
+}
+
+window.addEventListener('load', loadGame);
