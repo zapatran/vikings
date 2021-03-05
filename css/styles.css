@@ -1,0 +1,68 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- game styles ---- */
+
+body {
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.container {
+  min-height: 80vh;
+  width: 80vw;
+  margin: 4rem auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h1 {
+  font-family: 'Passero One', cursive;
+  font-size: 4.5rem;
+}
+
+.button {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: 2px solid black;
+  background-color: purple;
+  border-radius: 0.5rem;
+}
+
+.status-message {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.army {
+  text-align: center;
+}
+
+.soldier {
+  list-style: none;
+  float: left;
+}
+.soldier--dead img {
+  transform: rotate(90deg);
+}
