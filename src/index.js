@@ -45,7 +45,6 @@ function destroySplashScreen() {
 
 function startGameClick() {
   destroySplashScreen();
-  // buildGameScreen();
 }
 
 function buildSplashScreen() {
