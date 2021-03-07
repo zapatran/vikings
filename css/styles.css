@@ -59,6 +59,15 @@ body {
   text-align: center;
 }
 
+#viking-army ul {
+  /* height: '105px'; */
+  overflow: auto;
+}
+#saxon-army ul {
+  /* height: '105px'; */
+  overflow: auto;
+}
+
 .soldier {
   list-style: none;
   float: left;

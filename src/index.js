@@ -44,10 +44,20 @@ function startGameClick() {
 
 function vikingAttackClicked() {
   console.log('vikingAttackClicked');
+  const message = war.vikingAttack();
+  renderSoldiers('saxon');
+  renderMessage(message);
 }
 
 function saxonAttackClicked() {
   console.log('saxonAttackClicked');
+  const message = war.saxonAttack();
+  renderSoldiers('viking');
+  renderMessage(message);
+}
+
+function renderMessage(message) {
+  gameScreen.querySelector('.status-message').innerText = message;
 }
 
 function renderSoldiers(faction) {
@@ -64,6 +74,7 @@ function renderSoldiers(faction) {
       break;
   }
 
+  list.innerHTML = '';
   army.forEach((soldier) => {
     const li = document.createElement('li');
     li.classList.add('soldier');
